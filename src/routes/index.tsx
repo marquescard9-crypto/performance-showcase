@@ -174,55 +174,30 @@ function Index() {
               key={act.title}
               className="mt-16 grid items-center gap-10 lg:grid-cols-12"
             >
-              <div
-                className={
-                  i === 1
-                    ? "order-2 lg:order-1 lg:col-span-5"
-                    : "lg:col-span-7 order-1"
-                }
-              >
-                {i !== 1 && (
-                  <>
-                    <p className="text-xs uppercase tracking-[0.3em] text-clay">
-                      {act.label}
-                    </p>
-                    <h3 className="mt-2 text-balance text-2xl leading-tight text-ink">
-                      {act.title}
-                    </h3>
-                    <p className="mt-3 max-w-[44ch] text-pretty text-base text-ink/60">
-                      {act.text}
-                    </p>
-                  </>
-                )}
-              </div>
-              <div
-                className={
-                  i === 1
-                    ? "order-1 lg:order-2 lg:col-span-7"
-                    : "lg:col-span-5 order-2"
-                }
-              >
-                {i === 1 && (
-                  <>
-                    <p className="text-xs uppercase tracking-[0.3em] text-clay">
-                      {act.label}
-                    </p>
-                    <h3 className="mt-2 text-balance text-2xl leading-tight text-ink">
-                      {act.title}
-                    </h3>
-                    <p className="mt-3 max-w-[44ch] text-pretty text-base text-ink/60">
-                      {act.text}
-                    </p>
-                  </>
-                )}
-              </div>
-              <div
-                className={`flex h-full flex-col justify-center gap-3 rounded-[min(1vw,12px)] p-8 ring-1 ${act.panel} ${
-                  i === 1
-                    ? "lg:order-1 lg:col-span-5"
-                    : "lg:order-2 lg:col-span-5"
-                }`}
-              >
+            <div
+              className={
+                i === 1
+                  ? "order-1 lg:order-2 lg:col-span-7"
+                  : "lg:col-span-7"
+              }
+            >
+              <p className="text-xs uppercase tracking-[0.3em] text-clay">
+                {act.label}
+              </p>
+              <h3 className="mt-2 text-balance text-2xl leading-tight text-ink">
+                {act.title}
+              </h3>
+              <p className="mt-3 max-w-[44ch] text-pretty text-base text-ink/60">
+                {act.text}
+              </p>
+            </div>
+            <div
+              className={`flex h-full flex-col justify-center gap-3 rounded-[min(1vw,12px)] p-8 ring-1 ${act.panel} ${
+                i === 1
+                  ? "order-2 lg:order-1 lg:col-span-5"
+                  : "lg:col-span-5"
+              }`}
+            >
                 {act.notes.map((note) => (
                   <div key={note.name} className="flex items-center gap-3">
                     <span
